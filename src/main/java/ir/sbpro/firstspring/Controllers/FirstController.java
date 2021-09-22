@@ -52,4 +52,9 @@ public class FirstController {
         people.add(new Person("Branko", "Ivancovic"));
         return new Gson().toJson(people);
     }
+
+    @PostMapping(value = "secform_object")
+    public String secFormObject(@ModelAttribute("persondata") Person person){
+        return person.toString();
+    }
 }

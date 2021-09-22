@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/secform_object}" th:object="${persondata}" method="post">
+        <div>
+            <span>First Name: </span>
+            <input type="text" th:field="*{fname}" />
+        </div>
+
+        <div>
+            <span>Last Name: </span>
+            <input type="text" th:field="*{lname}" />
+        </div>
+
+        <div>
+            <input type="submit" value="submit">
+        </div>
+    </form>
+</body>
+</html>
